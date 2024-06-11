@@ -1,0 +1,37 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/layout/Footer.astro";
+import Navbar from "../components/layout/Navbar.astro";
+---
+
+<html lang="en" class="scroll-smooth focus:scroll-auto">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- SEO -->
+    <meta name="title" content="Waldid Barrios" />
+    <meta
+      name="description"
+      content="Desarrollamos Metodologías, Modelos analiticos y Herramientas
+        innovadoras que le permiten a las empresas aprovechar al máximo los
+        datos"
+    />
+    <meta
+      name="keywords"
+      content="people,analytics,laboratory,analisis,personas,laboratorio"
+    />
+    <title>Waldid Barrios</title>
+    <!-- FIN SEO -->
+    <ViewTransitions />
+  </head>
+  <body class="bg-slate-100 text-base lg:text-lg">
+    <!-- Menu -->
+    <Navbar />
+    <!-- Content web -->
+    <slot />
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>
